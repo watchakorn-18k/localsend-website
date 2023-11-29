@@ -1,4 +1,4 @@
-import { createI18n } from 'vue-i18n'
+import {createI18n} from 'vue-i18n'
 import cs from '@/locales/cs.json'
 import de from '@/locales/de.json'
 import en from '@/locales/en.json'
@@ -7,15 +7,16 @@ import fr from '@/locales/fr.json'
 import it from '@/locales/it.json'
 import ja from '@/locales/ja.json'
 import km from '@/locales/km.json'
-import ru from '@/locales/ru.json'
+import pl from '@/locales/pl.json'
 import ptBR from '@/locales/pt-BR.json'
+import ru from '@/locales/ru.json'
 import th from '@/locales/th.json'
 import trTR from '@/locales/tr-TR.json'
 import zhCN from '@/locales/zh-CN.json'
 import zhTW from '@/locales/zh-TW.json'
 import zhHK from '@/locales/zh-HK.json'
 
-export const locales: {[key: string]: [string, Record<string, any>]} = {
+export const locales: { [key: string]: [string, Record<string, any>] } = {
   'cs': ['Čeština', cs],
   'de': ['Deutsch', de],
   'en': ['English', en],
@@ -25,6 +26,7 @@ export const locales: {[key: string]: [string, Record<string, any>]} = {
   'ja': ['日本語', ja],
   'km': ['ភាសាខ្មែរ', km],
   'ru': ['Русский', ru],
+  'pl': ['Polski', pl],
   'pt-BR': ['Português brasileiro', ptBR],
   'th': ['ภาษาไทย', th],
   'tr-TR': ['Türkçe', trTR],
@@ -93,7 +95,7 @@ function parseLocaleParts(locale: string): LocaleParts | undefined {
       extlang = regionToExtlangMap[region!];
     }
     script = script ? script[0].toUpperCase() + script.slice(1) : regionToScriptMap[region!];
-    return { language, extlang, script, region };
+    return {language, extlang, script, region};
   }
 }
 

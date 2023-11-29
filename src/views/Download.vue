@@ -145,6 +145,10 @@ const downloadMetadata = computed<Record<OS, Download>>(() => {
       stores: [],
       binaries: [
         {
+          name: 'EXE',
+          url: assetsMap.value['exe'] ?? fallbackUrl,
+        },
+        {
           name: 'MSIX',
           url: assetsMap.value['msix'] ?? fallbackUrl,
         },
@@ -164,7 +168,7 @@ const downloadMetadata = computed<Record<OS, Download>>(() => {
         },
         {
           name: 'Scoop',
-          commands: ['scoop install localsend'],
+          commands: ['scoop bucket add extras; scoop install localsend'],
         },
       ],
     },
